@@ -1,0 +1,8 @@
+.content_ {
+    width: 100%;
+}
+.sidebar-icon {
+    padding: 20px;
+    position: absolute;
+    z-index: 20;
+}

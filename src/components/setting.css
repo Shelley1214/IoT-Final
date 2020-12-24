@@ -1,0 +1,21 @@
+.word{
+    display:inline;
+    color:#056571;
+}
+
+.setting{
+    background-color: white;
+    text-align: left;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0%;
+    max-height: 50.67px;
+    min-height: 49px;
+}
+
+.change{
+    display: inline;
+    color:#056571;
+    text-align: right;
+    float: right;
+    border: none;
+}
