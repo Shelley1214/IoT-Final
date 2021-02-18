@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Route } from 'react-router-dom';
 import Home from 'components/Home.jsx';
-import Intro from 'components/intro.jsx';
 import SideBtn from 'components/ShowSideBtn.jsx'
 import Setting from 'components/setting.jsx'
+import Intro from 'components/intro.jsx'
 import "./Content.css"
 
 export default class Content extends React.Component {
@@ -24,7 +24,6 @@ export default class Content extends React.Component {
           };
         return(
             <div className={`content_ `}>
-
                 <Route exact path="/" render={() => (
                             <Intro IdFunc={this.props.IdFunc} />
                         )} />

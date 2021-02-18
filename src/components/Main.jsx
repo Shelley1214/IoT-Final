@@ -46,7 +46,6 @@ export default class Main extends React.Component {
     }
 
     handleWholeToggle(){
-        console.log("run")
         if(this.state.navbarToggle == true){
             this.setState((prevState, props) => ({
                 navbarToggle: !prevState.navbarToggle

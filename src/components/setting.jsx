@@ -40,31 +40,31 @@ export default class Setting extends React.Component {
                 <div className="text-center my-2" >設定</div>
                 <Helmet bodyAttributes={{style: 'background-color :#414141'}}/>
                 <ListGroup className="list-group-flush" style={{color:'black'}}>
-                    <ListGroupItem className="my-2">
+                    {/* <ListGroupItem className="my-2">
                         <i className="fa fa-pencil" aria-hidden="true"></i>
                         <p className="word">&nbsp;&nbsp;我</p>
                         <input type="text" className="change" value={this.state.name} onChange={this.handleNameChange}/>
 
-                    </ListGroupItem>
-                    <ListGroupItem className="my-2">
+                    </ListGroupItem> */}
+                    <ListGroupItem className="my-2"style={{margin:'15rem'}}>
                         <i className="fa fa-bell " style={{textAlign:'left', fontSize:'13.72px'}}aria-hidden="true"></i>
-                        <p className="word">&nbsp;&nbsp;通知</p>
+                        <p className="word" >&nbsp;&nbsp;通知</p>
                         <select className="change" value={this.state.notice} onChange={this.handleChange}>
                             <option value="On">On</option>
                             <option value="Off">Off</option>
                         </select>
                     </ListGroupItem>
-                    <Link to="/Setting" style={{textDecoration:'none'}}>
+                    {/* <Link to="/Setting" style={{textDecoration:'none'}}>
                         <button className="my-2 setting">
                             <i className="fa fa-gear " style={{color:'black'}} aria-hidden="true"></i>
                             <p className="word">&nbsp;&nbsp;一般</p>
                         </button>
-                    </Link>
-                    <ListGroupItem className="my-2">
+                    </Link> */}
+                    {/* <ListGroupItem className="my-2">
                         <i className="fa fa-user " aria-hidden="true"></i>
                         <p className="word">&nbsp;&nbsp;帳號</p>
                         <input type="text" className="change" value={this.state.email} onChange={this.handleMailChange} />
-                    </ListGroupItem>
+                    </ListGroupItem> */}
                 </ListGroup>
             </div>
         )

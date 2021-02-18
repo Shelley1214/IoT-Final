@@ -11,7 +11,7 @@ const SideBar = props => (
     <div className={classNames('sidebar', {'is-open': props.isOpen})}>
       <div className="sidebar-header">
         <span color="info" onClick={props.toggle} style={{color: '#fff'}}>&times;</span>
-        <h3>Memory Bank</h3>
+        <h3>Sleep Tracker</h3>
       </div>
       <div className="side-menu">
         <Nav vertical className="list-unstyled pb-3" onClick={props.toggle}>

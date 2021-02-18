@@ -1,41 +1,152 @@
 .home {
     padding: 20px;
 }
-.image{
-    width: 5.5rem;
-    height: 5rem;
-    display: block;
-    margin: 1.5rem auto 
-}
-.info{
-    display: block;
-    text-align: center;
-}
-
-.number{
-    margin: 0 0.5rem;
-    text-align: center;
-}
-
-.fa-venus{
-    background-color: transparent;
-    color: red
-}
-
-
-.fa-mars{
-    background-color: transparent;
-    color: blue
-}
-
-.vert-r{
-    border-right: solid 0.1rem rgba(255, 255, 255);
-}
-
-.vert-l{
-    border-left: solid 0.1rem rgba(255, 255, 255);
-}
 
 .btn{
     max-width: 390px;
+}
+
+.datepicker {
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  color: white
+  }
+
+  
+.ttt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.tabber {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+}
+.tabber label {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding: 1rem 5rem 1rem 5rem;
+  cursor: pointer;
+  will-change: transform;
+  transform: translateZ(0px);
+  transition: transform 125ms ease-in-out, filter 125ms ease-in-out;
+}
+.tabber label:hover {
+  transform: scale(1.15);
+}
+.tabber input[type=radio] {
+  display: none;
+}
+.tabber input[type=radio]#t1 ~ .blob {
+  transform-origin: right center;
+}
+.tabber input[type=radio]#t2 ~ .blob {
+  transform-origin: left center;
+}
+.tabber input[type=radio]#t1:checked ~ .blob {
+  background: #8f8887;
+  -webkit-animation-name: stretchyRev;
+          animation-name: stretchyRev;
+}
+.tabber input[type=radio]#t2:checked ~ .blob {
+  background-color: #8f8887;
+  -webkit-animation-name: stretchy;
+          animation-name: stretchy;
+}
+.tabber .blob {
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  border-radius: 1.5rem;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-direction: forwards;
+          animation-direction: forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  transition: transform 150ms ease, background 150ms ease;
+}
+.tabber .blob:before {
+  left: 0;
+  -webkit-animation-delay: 0.15s;
+          animation-delay: 0.15s;
+}
+.tabber .blob:after {
+  right: 0;
+}
+
+@-webkit-keyframes stretchy {
+  0% {
+    transform: translateX(0) scaleX(1);
+  }
+  50% {
+    transform: translateX(0) scaleX(2);
+  }
+  100% {
+    transform: translateX(100%) scaleX(1);
+  }
+}
+
+@keyframes stretchy {
+  0% {
+    transform: translateX(0) scaleX(1);
+  }
+  50% {
+    transform: translateX(0) scaleX(2);
+  }
+  100% {
+    transform: translateX(100%) scaleX(1);
+  }
+}
+@-webkit-keyframes stretchyRev {
+  0% {
+    transform: translateX(100%) scaleX(1);
+  }
+  50% {
+    transform: translateX(0) scaleX(2);
+  }
+  100% {
+    transform: translateX(0) scaleX(1);
+  }
+}
+@keyframes stretchyRev {
+  0% {
+    transform: translateX(100%) scaleX(1);
+  }
+  50% {
+    transform: translateX(0) scaleX(2);
+  }
+  100% {
+    transform: translateX(0) scaleX(1);
+  }
+}
+@-webkit-keyframes pulse {
+  0%, 50% {
+    transform: scaleX(1);
+  }
+  25%, 75% {
+    transform: scaleX(1.5);
+  }
+}
+@keyframes pulse {
+  0%, 50% {
+    transform: scaleX(1);
+  }
+  25%, 75% {
+    transform: scaleX(1.5);
+  }
 }
